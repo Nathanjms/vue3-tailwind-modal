@@ -19,8 +19,6 @@ Install Auto Typer Vue3 with npm
 npm install vue3-tailwind-model
 ```
 
-Then import the module and css file into your Vue component (see usage/example below).
-
 ## Props
 
 | Prop        | Type | Default | Description | Validation |
@@ -52,12 +50,4 @@ To test the packaged build, run:
 2. `npm run dev:run-pack`
 
 This will run a dev server with the packaged version of `vue3-tailwind-modal3`, instead of the normal one.
-
-## Future Plans
-
-- ~Add custom styling options the the cursor.~
-    - Can be done with the style area already (example has been added to README)
-- Add a variable to allow a certain number of repeats, instead of just a boolean.
-- Handle whether to leave the final word on the screen once repeating has stopped.
-- ...any other suggestions will be considered, please leave an issue if you have any feature requests!
 # vue3-tailwind-modal

@@ -21,5 +21,3 @@ const showModals = ref({
     </Vue3TailwindModal>
   </div>
 </template>
-
-<style scoped></style>
