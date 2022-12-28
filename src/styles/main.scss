@@ -1,0 +1,17 @@
+.vue3-tailwind-modal {
+  white-space: pre-wrap;
+  &:after {
+    content: "";
+    position: inline-block;
+    border: 1px solid;
+    opacity: 0.5;
+    margin-left: 1px;
+    animation: atv-cursor-blink 1.5s step-start infinite;
+  }
+}
+
+@keyframes atv-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}

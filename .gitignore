@@ -1,0 +1,17 @@
+.DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist
+dist-ssr
+build
+node_modules
+.idea/
+*.log
+/coverage
+
+playground/package-lock.json
+playground/dist
+
+__unconfig_vite.config.ts
+.vercel

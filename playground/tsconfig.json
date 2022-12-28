@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "types": ["../global"],
+    "paths": {
+      "@/*": ["src/*"],
+      "vue3-tailwind-modal": ["../src"],
+      "vue3-tailwind-modal/*": ["../src/*"]
+    }
+  }
+}
