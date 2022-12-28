@@ -2,15 +2,14 @@
 
 A simple modal, written in Vue3.
 
+Note: _Tailwind is required to use this package, but is not forced as a dependency. See [here](https://tailwindcss.com/docs/guides/vite#vue) for how to set it up with Vite._
 
 <p align="center">
-  <!-- <img src="https://img.shields.io/npm/v/vue3-tailwind-modal3" /> -->
-  <!-- <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal3" /> -->
+  <img src="https://img.shields.io/npm/v/vue3-tailwind-modal3" />
+  <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal3" />
 </p>
 
 ## Screenshot(s)
-<!-- ![Screen Recording 2022-08-28 at 10 40 25](https://user-images.githubusercontent.com/64075030/187067804-a4d0a055-58a9-4d71-b0bd-d100591ba83a.gif) -->
-
 ### Light Mode
 
 ![image](https://user-images.githubusercontent.com/64075030/209852301-e9d1b786-9061-4ac6-bdd4-eb2fc85f5d09.png)
@@ -31,15 +30,41 @@ npm install vue3-tailwind-model
 
 ## Props
 
-| Prop        | Type | Default | Description | Validation |
-| :---------- | :--- | :------ | :---------- | :--------- |
-| Coming Soon |
+| Prop                 | Type    | Default | Description                                                          | Validation |
+| :------------------- | :------ | :------ | :------------------------------------------------------------------- | :--------- |
+| showModal            | Boolean | false   | Toggles whether the modal can be seen.                               | N/A        |
+| allowBackgroundClose | Boolean | true    | Allows closing of the modal by clicking the background.              | N/A        |
+| closeOnEscape        | Boolean | true    | Allows closing of the modal by clicking the Esc key on the keyboard. | N/A        |
 ## Usage/Example
 
 ### Basic Example
 
 ```vue
-Coming Soon
+<script setup lang="ts">
+import { ref } from "vue";
+import { Vue3TailwindModal } from "vue3-tailwind-modal";
+
+const showModal = ref(false);
+</script>
+
+<template>
+  <div class="w-screen grid place-items-center justify-center min-h-screen bg-slate-700">
+    <button
+      @click="showModal = true"
+      class="rounded-xl px-2 text-white dark:text-gray-700 bg-gray-700 dark:bg-gray-200 hover:bg-gray-600 dark:hover:bg-gray-300 disabled:bg-gray-500 dark:disabled:bg-gray-500 text-lg"
+    >
+      Show Modal A
+    </button>
+    <Vue3TailwindModal :showModal="showModal" @close="showModal = false">
+      <template #header><h2 class="text-lg">Example 1</h2></template>
+      The default slot is the body, so we don't need to wrap this inside template tags.
+    </Vue3TailwindModal>
+  </div>
+</template>
+
+<style scoped>
+@import "vue3-tailwind-modal/dist/style.css";
+</style>
 ```
 
 ## Development

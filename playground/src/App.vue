@@ -5,6 +5,8 @@ import { Vue3TailwindModal } from "vue3-tailwind-modal";
 const showModals = ref({
   A: false,
 });
+
+// TODO: Dark mode toggle here!
 </script>
 
 <template>
@@ -16,7 +18,7 @@ const showModals = ref({
       Show Modal A
     </button>
     <Vue3TailwindModal :showModal="showModals.A" @close="showModals.A = false">
-      <template #header>Example 1</template>
+      <template #header><h2 class="text-lg">Example 1</h2></template>
       The default slot is the body, so we don't need to wrap this inside template tags.
     </Vue3TailwindModal>
   </div>
