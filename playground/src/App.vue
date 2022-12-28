@@ -13,11 +13,11 @@ const showModals = ref({
       @click="showModals.A = true"
       class="rounded-xl px-2 text-white dark:text-gray-700 bg-gray-700 dark:bg-gray-200 hover:bg-gray-600 dark:hover:bg-gray-300 disabled:bg-gray-500 dark:disabled:bg-gray-500 text-lg"
     >
-      Show
+      Show Modal A
     </button>
     <Vue3TailwindModal :showModal="showModals.A" @close="showModals.A = false">
       <template #header>Example 1</template>
-      The default slot is the body.
+      The default slot is the body, so we don't need to wrap this inside template tags.
     </Vue3TailwindModal>
   </div>
 </template>
