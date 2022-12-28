@@ -2,6 +2,7 @@
 
 A simple modal, written in Vue3.
 
+
 <p align="center">
   <!-- <img src="https://img.shields.io/npm/v/vue3-tailwind-modal3" /> -->
   <!-- <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal3" /> -->
@@ -9,7 +10,16 @@ A simple modal, written in Vue3.
 
 ## Screenshot(s)
 <!-- ![Screen Recording 2022-08-28 at 10 40 25](https://user-images.githubusercontent.com/64075030/187067804-a4d0a055-58a9-4d71-b0bd-d100591ba83a.gif) -->
-Coming soon
+
+### Light Mode
+
+![image](https://user-images.githubusercontent.com/64075030/209852301-e9d1b786-9061-4ac6-bdd4-eb2fc85f5d09.png)
+
+### Dark Mode
+
+![image](https://user-images.githubusercontent.com/64075030/209852426-3c680912-3ba1-4e41-9b81-aa723181a63d.png)
+
+
 
 ## Installation
 
