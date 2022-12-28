@@ -17,7 +17,7 @@ export default defineComponent({
       default: true,
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const close = () => {
       emit("close");
     };
@@ -45,6 +45,10 @@ export default defineComponent({
         document.addEventListener("keydown", handleEscClick);
       }
     });
+
+    return {
+      close,
+    };
   },
 });
 </script>
@@ -96,15 +100,3 @@ export default defineComponent({
     </div>
   </Transition>
 </template>
-
-<style>
-.vtm-fade-enter-from,
-.vtm-fade-leave-to {
-  opacity: 0;
-}
-
-.vtm-fade-enter-active,
-.vtm-fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-</style>

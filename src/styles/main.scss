@@ -1,17 +1,9 @@
-.vue3-tailwind-modal {
-  white-space: pre-wrap;
-  &:after {
-    content: "";
-    position: inline-block;
-    border: 1px solid;
-    opacity: 0.5;
-    margin-left: 1px;
-    animation: atv-cursor-blink 1.5s step-start infinite;
-  }
+.vtm-fade-enter-from,
+.vtm-fade-leave-to {
+  opacity: 0;
 }
 
-@keyframes atv-cursor-blink {
-  50% {
-    opacity: 0;
-  }
+.vtm-fade-enter-active,
+.vtm-fade-leave-active {
+  transition: opacity 0.3s ease;
 }
