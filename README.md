@@ -5,8 +5,8 @@ A simple modal, written in Vue3.
 Note: _Tailwind is required to use this package, but is not forced as a dependency. See [here](https://tailwindcss.com/docs/guides/vite#vue) for how to set it up with Vite._
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/vue3-tailwind-modal3" />
-  <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal3" />
+  <img src="https://img.shields.io/npm/v/vue3-tailwind-modal" />
+  <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal" />
 </p>
 
 ## Screenshot(s)
