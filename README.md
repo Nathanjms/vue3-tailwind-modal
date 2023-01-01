@@ -28,6 +28,23 @@ Install Auto Typer Vue3 with npm
 npm install vue3-tailwind-model
 ```
 
+Then, to avoid the css being purged by tailwind, add `./node_modules/vue3-tailwind-modal/**/*.js` to the `content` section of your tailwind config (leave the rest of this config alone, just add this entry in - see below):
+
+```js
+  /** @type {import('tailwindcss').Config} */
+  module.exports = {
+    content: [
+      "./index.html",
+      "./src/**/*.{vue,js,ts,jsx,tsx}",
+      "./node_modules/vue3-tailwind-modal/**/*.js",
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  }
+```
+
 ## Props
 
 | Prop                 | Type    | Default | Description                                                          | Validation |
