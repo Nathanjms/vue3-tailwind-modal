@@ -84,6 +84,18 @@ const showModal = ref(false);
 </style>
 ```
 
+The footer can be customised too, eg.
+
+```vue
+<template>
+  <Vue3TailwindModal :showModal="showModal" @close="showModal = false">
+    <template #header><h2 class="text-lg">Example B</h2></template>
+    The default slot is the body, so we don't need to wrap this inside template tags.
+    <template #footer><div class="border-t mt-2 text-right">The footer can be customised, too.</div></template>
+  </Vue3TailwindModal>
+</template>
+```
+
 ## Development
 
 There is a folder `playground` **inside** this repository which can be used as a basis for development. Clone the repo and run:
