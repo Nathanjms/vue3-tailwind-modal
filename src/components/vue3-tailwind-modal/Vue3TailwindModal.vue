@@ -64,12 +64,10 @@ export default defineComponent({
     <div
       v-if="showModal"
       @click.self="() => allowBackgroundClose && close()"
-      class="fixed inset-0 w-full h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center"
-    >
+      class="fixed inset-0 w-full h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center">
       <div
-        class="overflow-auto flex flex-col py-2 px-4 min-w-[70vw] max-w-[90vh] rounded-xl shadow-xl bg-gray-100 dark:bg-slate-700 dark:text-gray-200"
-        role="dialog"
-      >
+        class="overflow-auto flex flex-col py-2 px-4 w-11/12 max-w-2xl rounded-xl shadow-xl bg-gray-100 dark:bg-slate-700 dark:text-gray-200"
+        role="dialog">
         <header class="flex justify-between pb-2">
           <slot name="header"></slot>
           <button @click="close" class="cursor-pointer">
@@ -79,8 +77,7 @@ export default defineComponent({
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6"
-            >
+              class="w-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -96,8 +93,7 @@ export default defineComponent({
               class="rounded-xl px-2 text-white dark:text-gray-700 bg-gray-700 dark:bg-gray-200 hover:bg-gray-600 dark:hover:bg-gray-300 disabled:bg-gray-500 dark:disabled:bg-gray-500 text-lg"
               type="button"
               aria-label="Close modal"
-              @click="close"
-            >
+              @click="close">
               Close
             </button>
           </footer>
