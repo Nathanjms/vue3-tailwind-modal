@@ -1,5 +1,5 @@
 <script>
-import { defineComponent, watch, onMounted } from "vue";
+import { defineComponent, watch, onMounted, onUnmounted } from "vue";
 
 export default defineComponent({
   name: "Vue3TailwindModal",
@@ -31,11 +31,7 @@ export default defineComponent({
           document.querySelector("body").style.top = `-${window.scrollY}px`;
           document.querySelector("body").style.position = "fixed";
         } else {
-          // When the modal is hidden, we want to remain at the top of the scroll position
-          const scrollY = document.body.style.top;
-          document.querySelector("body").style.position = "";
-          document.querySelector("body").style.top = ``;
-          window.scrollTo(0, parseInt(scrollY || "0") * -1);
+          tidyUpAfterModal();
         }
       }
     );
@@ -51,6 +47,19 @@ export default defineComponent({
         document.addEventListener("keydown", handleEscClick);
       }
     });
+
+    onUnmounted(() => {
+      document.removeEventListener("keydown", handleEscClick);
+      tidyUpAfterModal();
+    });
+
+    const tidyUpAfterModal = () => {
+      // When the modal is hidden, we want to remain at the top of the scroll position
+      const scrollY = document.body.style.top;
+      document.querySelector("body").style.position = "";
+      document.querySelector("body").style.top = ``;
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    };
 
     return {
       close,
