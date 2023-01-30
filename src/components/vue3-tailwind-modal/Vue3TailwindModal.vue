@@ -75,7 +75,7 @@ export default defineComponent({
       @click.self="() => allowBackgroundClose && close()"
       class="fixed inset-0 w-full h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center">
       <div
-        class="overflow-auto flex flex-col py-2 px-4 w-11/12 max-w-2xl rounded-xl shadow-xl bg-gray-100 dark:bg-slate-700 dark:text-gray-200"
+        class="overflow-auto flex flex-col py-2 px-4 max-h-[90%] w-11/12 max-w-2xl rounded-xl shadow-xl bg-gray-100 dark:bg-slate-700 dark:text-gray-200"
         role="dialog">
         <header class="flex justify-between pb-2">
           <slot name="header"></slot>
