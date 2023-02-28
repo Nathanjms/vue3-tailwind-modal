@@ -47,11 +47,12 @@ Then, to avoid the css being purged by tailwind, add `./node_modules/vue3-tailwi
 
 ## Props
 
-| Prop                 | Type    | Default | Description                                                          | Validation |
-| :------------------- | :------ | :------ | :------------------------------------------------------------------- | :--------- |
-| showModal            | Boolean | false   | Toggles whether the modal can be seen.                               | N/A        |
-| allowBackgroundClose | Boolean | true    | Allows closing of the modal by clicking the background.              | N/A        |
-| closeOnEscape        | Boolean | true    | Allows closing of the modal by clicking the Esc key on the keyboard. | N/A        |
+| Prop                 | Type    | Default                                            | Description                                                          | Validation |
+| :------------------- | :------ | :------------------------------------------------- | :------------------------------------------------------------------- | :--------- |
+| showModal            | Boolean | false                                              | Toggles whether the modal can be seen.                               | N/A        |
+| allowBackgroundClose | Boolean | true                                               | Allows closing of the modal by clicking the background.              | N/A        |
+| closeOnEscape        | Boolean | true                                               | Allows closing of the modal by clicking the Esc key on the keyboard. | N/A        |
+| backgroundColors     | String  | "bg-gray-100 dark:bg-slate-700 dark:text-gray-200" | Allows customisation of the modal's background color.                | N/A        |
 ## Usage/Example
 
 ### Basic Example

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 import { defineComponent, watch, onMounted, onUnmounted } from "vue";
 
 export default defineComponent({
@@ -16,6 +16,10 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    backgroundColors: {
+      type: String,
+      default: "bg-gray-100 dark:bg-slate-700 dark:text-gray-200",
+    },
   },
   setup(props, { emit }) {
     const close = () => {
@@ -28,8 +32,8 @@ export default defineComponent({
       (newVal) => {
         if (newVal == true) {
           // When the modal is shown, we want a fixed body
-          document.querySelector("body").style.top = `-${window.scrollY}px`;
-          document.querySelector("body").style.position = "fixed";
+          document.querySelector("body")!.style.top = `-${window.scrollY}px`;
+          document.querySelector("body")!.style.position = "fixed";
         } else {
           tidyUpAfterModal();
         }
@@ -56,8 +60,8 @@ export default defineComponent({
     const tidyUpAfterModal = () => {
       // When the modal is hidden, we want to remain at the top of the scroll position
       const scrollY = document.body.style.top;
-      document.querySelector("body").style.position = "";
-      document.querySelector("body").style.top = ``;
+      document.querySelector("body")!.style.position = "";
+      document.querySelector("body")!.style.top = ``;
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     };
 
@@ -74,7 +78,6 @@ export default defineComponent({
     leave-to-class="transform opacity-0"
     enter-active-class="transition ease duration-300"
     leave-active-class="transition ease duration-300"
-
   >
     <div
       v-if="showModal"
@@ -82,7 +85,8 @@ export default defineComponent({
       class="fixed inset-0 w-full h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center"
     >
       <div
-        class="flex flex-col py-2 px-4 max-h-[65%] w-11/12 max-w-4xl rounded-xl shadow-xl bg-gray-100 dark:bg-slate-700 dark:text-gray-200"
+        class="flex flex-col py-2 px-4 max-h-[65%] w-11/12 max-w-3xl rounded-xl shadow-xl"
+        :class="backgroundColors"
         role="dialog"
       >
         <header class="flex justify-between pb-2">
