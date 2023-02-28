@@ -78,10 +78,6 @@ const showModal = ref(false);
     </Vue3TailwindModal>
   </div>
 </template>
-
-<style scoped>
-@import "vue3-tailwind-modal/dist/style.css";
-</style>
 ```
 
 The footer can be customised too, eg.
