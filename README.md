@@ -52,7 +52,7 @@ Then, to avoid the css being purged by tailwind, add `./node_modules/vue3-tailwi
 | showModal            | Boolean | false                                              | Toggles whether the modal can be seen.                               | N/A        |
 | allowBackgroundClose | Boolean | true                                               | Allows closing of the modal by clicking the background.              | N/A        |
 | closeOnEscape        | Boolean | true                                               | Allows closing of the modal by clicking the Esc key on the keyboard. | N/A        |
-| backgroundColors     | String  | "bg-gray-100 dark:bg-slate-700 dark:text-gray-200" | Allows customisation of the modal's background color.                | N/A        |
+| colors               | String  | "bg-gray-100 dark:bg-slate-700 dark:text-gray-200" | Allows customisation of the modal's background color.                | N/A        |
 ## Usage/Example
 
 ### Basic Example
@@ -81,14 +81,30 @@ const showModal = ref(false);
 </template>
 ```
 
-The footer can be customised too, eg.
+### The footer can be customised too, eg.
 
 ```vue
 <template>
-  <Vue3TailwindModal :showModal="showModal" @close="showModal = false">
-    <template #header><h2 class="text-lg">Example B</h2></template>
+  <Vue3TailwindModal :showModal="showModal" @close="() => showModal = false">
+    <template #header><h2 class="text-lg">Example 2</h2></template>
     The default slot is the body, so we don't need to wrap this inside template tags.
     <template #footer><div class="border-t mt-2 text-right">The footer can be customised, too.</div></template>
+  </Vue3TailwindModal>
+</template>
+```
+
+### The color of the modal can also be customised
+
+Pass the prop `colors` to the modal.
+```vue
+<template>
+  <Vue3TailwindModal
+    :showModal="showModal"
+    @close="() => showModal = false"
+    colors="bg-blue-600 dark:bg-blue-900 text-gray-200"
+  >
+    <template #header><h2 class="text-lg">Example 3</h2></template>
+    The background color of the modal can also be customised.
   </Vue3TailwindModal>
 </template>
 ```

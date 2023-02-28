@@ -16,7 +16,7 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
-    backgroundColors: {
+    colors: {
       type: String,
       default: "bg-gray-100 dark:bg-slate-700 dark:text-gray-200",
     },
@@ -86,7 +86,7 @@ export default defineComponent({
     >
       <div
         class="flex flex-col py-2 px-4 max-h-[65%] w-11/12 max-w-3xl rounded-xl shadow-xl"
-        :class="backgroundColors"
+        :class="colors"
         role="dialog"
       >
         <header class="flex justify-between pb-2">
