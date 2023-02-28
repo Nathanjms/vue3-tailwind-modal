@@ -109,6 +109,17 @@ Pass the prop `colors` to the modal.
 </template>
 ```
 
+## Upgrading from 0.0.8 to 0.0.9
+
+You no longer need to import the css file for the transition to work, so remove the following and it should all work as before:
+
+```vue
+<style scoped>
+@import "vue3-tailwind-modal/dist/style.css";
+</style>
+```
+
+
 ## Development
 
 There is a folder `playground` **inside** this repository which can be used as a basis for development. Clone the repo and run:
