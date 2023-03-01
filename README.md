@@ -5,20 +5,12 @@ A simple modal, written in Vue3.
 Note: _Tailwind is required to use this package, but is not forced as a dependency. See [here](https://tailwindcss.com/docs/guides/vite#vue) for how to set it up with Vite._
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/vue3-tailwind-modal" />
-  <img src="https://img.shields.io/npm/dt/vue3-tailwind-modal" />
+  <a href="https://www.npmjs.com/package/vue3-tailwind-modal"><img src="https://img.shields.io/npm/v/vue3-tailwind-modal" /></a>
+  <a href="https://www.npmjs.com/package/vue3-tailwind-modal"><img src="https://img.shields.io/npm/dt/vue3-tailwind-modal" /></a>
 </p>
 
 ## Screenshot(s)
-### Light Mode
-
-![image](https://user-images.githubusercontent.com/64075030/209852301-e9d1b786-9061-4ac6-bdd4-eb2fc85f5d09.png)
-
-### Dark Mode
-
-![image](https://user-images.githubusercontent.com/64075030/209852426-3c680912-3ba1-4e41-9b81-aa723181a63d.png)
-
-
+![image](https://github.com/Nathanjms/vue3-tailwind-modal/blob/main/assets/modalDemo.gif)
 
 ## Installation
 
