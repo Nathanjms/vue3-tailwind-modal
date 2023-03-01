@@ -83,12 +83,16 @@ const darkMode = ref(false);
     </div>
     <Vue3TailwindModal :showModal="showModals.A" @close="() => (showModals.A = false)">
       <template #header><h2 class="text-lg">Example A</h2></template>
-      The default slot is the body, so we don't need to wrap this inside template tags.
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et dictum arcu, et interdum eros.
+        Suspendisse fringilla purus neque, a semper tortor scelerisque ac. Ut sit amet turpis non urna tempor faucibus
+        sed eget leo. Etiam gravida odio dui, in tempus turpis pharetra in. Quisque purus dolor, cursus in ornare.
+      </div>
     </Vue3TailwindModal>
     <Vue3TailwindModal :showModal="showModals.B" @close="() => (showModals.B = false)">
       <template #header><h2 class="text-lg">Example B</h2></template>
       The default slot is the body, so we don't need to wrap this inside template tags.
-      <template #footer><div class="border-t mt-2 text-right">The footer can be customised, too.</div></template>
+      <template #footer><div class="border-t border-slate-300 mt-2 text-right">The footer can be customised, too.</div></template>
     </Vue3TailwindModal>
     <Vue3TailwindModal
       :showModal="showModals.C"
@@ -97,7 +101,6 @@ const darkMode = ref(false);
     >
       <template #header><h2 class="text-lg">Example C</h2></template>
       The background color of the modal can also be customised.
-      <template #footer><div class="border-t mt-2 text-right">The footer can be customised, too.</div></template>
     </Vue3TailwindModal>
   </div>
 </template>

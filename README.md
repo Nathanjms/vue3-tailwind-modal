@@ -109,7 +109,7 @@ Pass the prop `colors` to the modal.
 </template>
 ```
 
-## Upgrading from 0.0.8 to 0.0.9
+## Upgrading from 0.0.8
 
 You no longer need to import the css file for the transition to work, so remove the following and it should all work as before:
 
