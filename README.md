@@ -45,6 +45,7 @@ Then, to avoid the css being purged by tailwind, add `./node_modules/vue3-tailwi
 | allowBackgroundClose | Boolean | true                                               | Allows closing of the modal by clicking the background.              | N/A        |
 | closeOnEscape        | Boolean | true                                               | Allows closing of the modal by clicking the Esc key on the keyboard. | N/A        |
 | colors               | String  | "bg-gray-100 dark:bg-slate-700 dark:text-gray-200" | Allows customisation of the modal's background color.                | N/A        |
+| modalClasses         | String  | ""                                                 | Allows any custom classes to be added to the modal.                  | N/A        |
 ## Usage/Example
 
 ### Basic Example
