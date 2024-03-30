@@ -115,6 +115,8 @@ You no longer need to import the css file for the transition to work, so remove 
 
 ## Development
 
+*First always run `npm install`.*
+
 There is a folder `playground` **inside** this repository which can be used as a basis for development. Clone the repo and run:
 
 1. `npm run dev:install`
@@ -126,9 +128,11 @@ The `App.vue` file can be modified to see changes in the browser, and navigating
 
 To test the packaged build, run:
 
-0. `npm install`
-1. `npm build:vite`
+1. `npm run build:vite`
 2. `npm run dev:run-pack`
 
 This will run a dev server with the packaged version of `vue3-tailwind-modal3`, instead of the normal one.
-# vue3-tailwind-modal
+
+## Future Plans
+
+[ ] Add tests so that when making changes, we can automate testing it still works.
