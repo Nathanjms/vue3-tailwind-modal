@@ -14,10 +14,10 @@ Note: _Tailwind is required to use this package, but is not forced as a dependen
 
 ## Installation
 
-Install Auto Typer Vue3 with npm
+Install Vue3 Tailwind Modal with npm
 
 ```bash
-npm install vue3-tailwind-model
+npm install vue3-tailwind-modal
 ```
 
 Then, to avoid the css being purged by tailwind, add `./node_modules/vue3-tailwind-modal/**/*.js` to the `content` section of your tailwind config (leave the rest of this config alone, just add this entry in - see below):
