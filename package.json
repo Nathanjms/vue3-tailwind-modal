@@ -1,6 +1,6 @@
 {
   "name": "vue3-tailwind-modal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple TailwindCSS modal, written in Vue3.",
   "keywords": [
     "vue3",
